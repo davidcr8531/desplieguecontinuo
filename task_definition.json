@@ -1,0 +1,30 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:058215456717:task-definition/despliegue-repository:1",
+    "containerDefinitions": [
+        {
+            "name": "despliegue-repository",
+            "image": "058215456717.dkr.ecr.us-east-2.amazonaws.com/despliegue-repository",
+            "cpu": 1024,
+            "memory": 1024,
+            "portMappings": [
+                {
+                    "name": "despliegue-repository-80-tcp",
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": [],
+            "resourceRequirements": [
+                {
+                    "value": "1",
+                    "type": "GPU"
+                }
+            ]
+        }
