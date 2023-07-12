@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:058215456717:task-definition/despliegue-tarea:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:058215456717:task-definition/despliegue-tarea:3",
     "containerDefinitions": [
         {
             "name": "despliegue-tarea",
-            "image": "058215456717.dkr.ecr.us-east-2.amazonaws.com/despliegue-tarea",
+            "image": "058215456717.dkr.ecr.us-east-2.amazonaws.com/despliegue-tarea:1ac13562ca59f30f29c02c251cf7c36ce9efff72",
             "cpu": 0,
             "portMappings": [
                 {
@@ -16,17 +16,15 @@
             ],
             "essential": true,
             "environment": [],
-            "environmentFiles": [],
             "mountPoints": [],
-            "volumesFrom": [],
-            "ulimits": []
+            "volumesFrom": []
         }
     ],
     "family": "despliegue-tarea",
     "taskRoleArn": "arn:aws:iam::058215456717:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::058215456717:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 3,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -60,7 +58,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-07-12T20:14:30.172Z",
-    "registeredBy": "arn:aws:iam::058215456717:root",
+    "registeredAt": "2023-07-12T20:44:23.318Z",
+    "registeredBy": "arn:aws:iam::058215456717:user/despliegue",
     "tags": []
 }
