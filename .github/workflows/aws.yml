@@ -32,12 +32,12 @@ on:
 
 env:
   AWS_REGION: us-east-2                # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: deploymenttarea           # set this to your Amazon ECR repository name
-  ECS_SERVICE: deploymenttarea-service                 # set this to your Amazon ECS service name
-  ECS_CLUSTER: deploymenttarea                # set this to your Amazon ECS cluster name
+  ECR_REPOSITORY: despliegue-tarea           # set this to your Amazon ECR repository name
+  ECS_SERVICE: despliegue-tarea-service                 # set this to your Amazon ECS service name
+  ECS_CLUSTER: despliegue-tarea               # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: task_definition.json # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
-  CONTAINER_NAME: deploymenttarea           # set this to the name of the container in the
+  CONTAINER_NAME: despliegue-tarea          # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
 
 permissions:
@@ -56,8 +56,8 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: AKIAQ3DPJL7G2IY4DHXR
-        aws-secret-access-key: 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
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ env.AWS_REGION }}
 
     - name: Login to Amazon ECR
